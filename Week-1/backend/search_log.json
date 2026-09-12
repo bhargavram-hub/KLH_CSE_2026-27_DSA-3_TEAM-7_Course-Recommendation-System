@@ -1,0 +1,184 @@
+[
+  {
+    "query": "machne lerning",
+    "category": null,
+    "mode": "fuzzy",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:29:07.546Z"
+  },
+  {
+    "query": "database",
+    "category": null,
+    "mode": "pattern",
+    "resultCount": 2,
+    "timestamp": "2026-08-27T09:29:07.605Z"
+  },
+  {
+    "query": "p",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 12,
+    "timestamp": "2026-08-27T09:42:58.148Z"
+  },
+  {
+    "query": "pyth",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:42:58.874Z"
+  },
+  {
+    "query": "pytho",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:42:59.247Z"
+  },
+  {
+    "query": "python",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:42:59.726Z"
+  },
+  {
+    "query": "pytho",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:43:04.320Z"
+  },
+  {
+    "query": "ja",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:43:06.018Z"
+  },
+  {
+    "query": "java",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:43:06.438Z"
+  },
+  {
+    "query": "ma",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 3,
+    "timestamp": "2026-08-27T09:43:41.058Z"
+  },
+  {
+    "query": "mach",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:43:41.448Z"
+  },
+  {
+    "query": "machi",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:43:41.778Z"
+  },
+  {
+    "query": "machine",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:43:42.195Z"
+  },
+  {
+    "query": "machin",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:46:02.867Z"
+  },
+  {
+    "query": "p",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 12,
+    "timestamp": "2026-08-27T09:46:04.250Z"
+  },
+  {
+    "query": "pyth",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:46:04.893Z"
+  },
+  {
+    "query": "pyt",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:46:06.063Z"
+  },
+  {
+    "query": "py",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:46:06.332Z"
+  },
+  {
+    "query": "p",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 12,
+    "timestamp": "2026-08-27T09:46:06.566Z"
+  },
+  {
+    "query": "p",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 12,
+    "timestamp": "2026-08-27T10:10:23.508Z"
+  },
+  {
+    "query": "pu",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T10:10:23.853Z"
+  },
+  {
+    "query": "p",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 12,
+    "timestamp": "2026-08-27T10:10:24.416Z"
+  },
+  {
+    "query": "pyt",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T10:10:24.873Z"
+  },
+  {
+    "query": "pytho",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T10:10:25.451Z"
+  },
+  {
+    "query": "python",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T10:10:25.669Z"
+  },
+  {
+    "query": "pytho",
+    "category": "AI/ML",
+    "mode": "pattern",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T10:10:29.158Z"
+  }
+]
