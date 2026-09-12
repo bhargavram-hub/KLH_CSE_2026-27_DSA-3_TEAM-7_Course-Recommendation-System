@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Intelligent course recommendation and search platform using DSA-3 algorithms.">
+<title>CourseMatch — Intelligent Course Recommendation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orb orb-one"></div><div class="bg-orb orb-two"></div>
+<header class="topbar">
+  <a class="brand" href="#">
+    <span class="brand-mark">CM</span><span><strong>CourseMatch</strong><small>DSA-3 Recommendation Engine</small></span>
+  </a>
+  <nav class="tabs" aria-label="Main navigation">
+    <button class="tab-btn active" data-tab="search">Explore Courses</button>
+    <button class="tab-btn" data-tab="recommend">My Learning Path</button>
+  </nav>
+  <div class="system-status"><i></i><span>Algorithm engine online</span></div>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">INTELLIGENT COURSE DISCOVERY</div>
+    <h1>Find the right course.<br><span>Even when you type it wrong.</span></h1>
+    <p>Search by skills, interests, descriptions or career goals. Pattern matching and fuzzy matching work together to surface the most relevant courses.</p>
+  </section>
+
+  <section id="tab-search" class="tab-panel active">
+    <div class="search-shell">
+      <div class="search-bar">
+        <span class="search-icon">⌕</span><input type="search" id="searchInput" placeholder="Try “machine learning”, “web dev”, or “databse”…" autocomplete="off" aria-label="Search courses">
+        <kbd>Ctrl K</kbd><button id="clearSearch" class="clear-btn" hidden aria-label="Clear search">×</button>
+      </div>
+      <div class="search-meta"><span id="searchStatus">Loading course catalogue…</span><span id="algorithmBadge" class="algorithm-badge">Preparing algorithms</span></div>
+    </div>
+    <div class="filter-row"><div class="filter-label">Filter by domain</div><div class="chip-row" id="categoryChips"><button class="chip active" data-category="">All courses</button></div></div>
+    <div class="results-head"><div><h2 id="resultsTitle">Course catalogue</h2><p>Explore prerequisites, credits and learning level.</p></div><span id="resultCount" class="result-count"></span></div>
+    <div class="results-grid" id="searchResults"></div>
+  </section>
+
+  <section id="tab-recommend" class="tab-panel">
+    <div class="recommend-layout">
+      <div class="recommend-form">
+        <div class="section-kicker">PERSONALIZED PLANNER</div><h2>Build your next semester</h2><p class="muted">Tell the engine what you have completed and where you want to go. It will find eligible courses and optimize the set within your credit limit.</p>
+        <div class="form-block"><label for="completedSearch">Courses already completed</label><div class="tag-input"><div class="tags" id="completedTags"></div><input type="text" id="completedSearch" placeholder="Search a course to add…" autocomplete="off"></div><div class="suggestions" id="completedSuggestions"></div></div>
+        <div class="form-block"><label>Career goal / specialization</label><div class="chip-row" id="careerGoalChips"></div></div>
+        <div class="form-block"><div class="range-label"><label for="creditLimitSlider">Next-term credit limit</label><strong><span id="creditLimitValue">12</span> credits</strong></div><input type="range" id="creditLimitSlider" min="3" max="20" value="12"></div>
+        <button id="recommendBtn" class="primary-btn">Generate my learning path <span>→</span></button>
+      </div>
+      <aside class="algorithm-card"><div class="section-kicker">HOW IT WORKS</div><h3>DSA-powered recommendations</h3>
+        <div class="algo-item"><b>01</b><div><strong>Prerequisite graph</strong><p>Checks every dependency before a course becomes eligible.</p></div></div>
+        <div class="algo-item"><b>02</b><div><strong>Dynamic Programming</strong><p>0/1 Knapsack selects the highest-value course set within credits.</p></div></div>
+        <div class="algo-item"><b>03</b><div><strong>Personalized scoring</strong><p>Career tags, level and progression influence relevance.</p></div></div>
+      </aside>
+    </div>
+    <div class="status-line" id="recommendStatus"></div><div class="results-grid" id="recommendResults"></div>
+  </section>
+</main>
+<footer><span>CourseMatch</span><span>KMP · Z-Function · Rabin-Karp · Edit Distance · Dynamic Programming</span></footer>
+<div id="prereqModal" class="modal-backdrop" hidden><div class="modal"><button class="modal-close" id="closeModal">×</button><div class="section-kicker">PREREQUISITE PATH</div><h3 id="modalTitle">Path to unlock</h3><div id="modalBody"></div></div></div>
+<script src="app.js"></script>
+</body></html>
