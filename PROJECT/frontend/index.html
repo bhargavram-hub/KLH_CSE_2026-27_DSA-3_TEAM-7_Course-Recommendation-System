@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CourseMatch — DSA-3 Course Recommendation System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grid-bg"></div><div class="orb a"></div><div class="orb b"></div>
+<header>
+  <a class="brand"><span class="logo">CM</span><span><b>CourseMatch</b><small>DSA-3 Course Recommendation System</small></span></a>
+  <nav>
+    <button class="nav active" data-tab="explore">Explore</button>
+    <button class="nav" data-tab="path">Learning Path</button>
+    <button class="nav" data-tab="lab">CO Algorithm Lab</button>
+    <button class="nav" data-tab="map">Project Map</button>
+  </nav>
+  <span class="live"><i></i> ENGINE ONLINE</span>
+</header>
+
+<main>
+<section class="hero">
+  <div class="eyebrow">DSA-3 · FULL PROJECT DEMO</div>
+  <h1>Course selection powered by<br><span>advanced algorithms.</span></h1>
+  <p>CourseMatch helps a student search courses, handle spelling mistakes, verify prerequisites, build a credit-limited learning path, and demonstrate the complete DSA-3 syllabus through interactive algorithm modules.</p>
+  <div class="hero-stats">
+    <div><b id="heroCourseCount">—</b><small>COURSES</small></div>
+    <div><b>6 / 6</b><small>CO MODULES</small></div>
+    <div><b>12+</b><small>ALGORITHMS</small></div>
+    <div><b id="heroStatus">LIVE</b><small>BACKEND API</small></div>
+  </div>
+</section>
+
+<section id="tab-explore" class="panel active">
+  <div class="search-wrap">
+    <div class="search"><span>⌕</span><input id="searchInput" placeholder="Try “machine learning”, “databse”, or “cyber security”…"><kbd>Ctrl K</kbd><button id="clear" hidden>×</button></div>
+    <div class="search-info"><span id="searchStatus">Loading catalogue…</span><b id="algorithmBadge">Algorithm engine</b></div>
+  </div>
+  <div class="filters"><span>DOMAIN</span><div id="categoryChips"><button class="chip active" data-cat="">All courses</button></div></div>
+  <div class="section-head"><div><label>COURSE CATALOGUE</label><h2>Explore courses</h2></div><span id="resultCount"></span></div>
+  <div id="searchResults" class="cards"></div>
+</section>
+
+<section id="tab-path" class="panel">
+  <div class="path-grid">
+    <div class="glass form">
+      <label>PERSONALIZED PLANNER</label><h2>Build your next semester</h2>
+      <p>Choose completed courses, a career goal and a credit budget. Eligibility comes from the prerequisite graph and the final set is optimized with 0/1 Knapsack DP.</p>
+      <div class="block"><b>Completed courses</b><div class="tag-input"><div id="completedTags"></div><input id="completedSearch" placeholder="Search and add completed course…"></div><div id="suggestions"></div></div>
+      <div class="block"><b>Career goal</b><div id="goals" class="chips"></div></div>
+      <div class="block"><div class="range"><b>Credit limit</b><strong><span id="creditValue">12</span> credits</strong></div><input id="creditSlider" type="range" min="3" max="20" value="12"></div>
+      <button id="recommendBtn" class="primary">Generate optimized learning path →</button><div id="pathStatus"></div>
+    </div>
+    <aside class="glass engine">
+      <label>DECISION PIPELINE</label><h3>How one recommendation is produced</h3>
+      <div class="step"><i>01</i><div><b>Prerequisite Graph</b><small>DFS traces missing dependencies and locks courses that are not yet eligible.</small></div></div>
+      <div class="step"><i>02</i><div><b>Recommendation Score</b><small>Combines career goal, course domain, level and prerequisite progression.</small></div></div>
+      <div class="step"><i>03</i><div><b>0/1 Knapsack DP</b><small>Chooses a high-value set without exceeding the credit budget.</small></div></div>
+      <div class="metric"><span>DP complexity</span><b>O(n × C)</b></div>
+    </aside>
+  </div>
+  <div class="section-head"><div><label>RESULT</label><h2>Recommended courses</h2></div></div>
+  <div id="pathResults" class="cards"></div>
+</section>
+
+<section id="tab-lab" class="panel">
+  <div class="section-head"><div><label>CO1 → CO6</label><h2>Interactive algorithm lab</h2><p>Every official course outcome has a runnable demonstration below.</p></div></div>
+
+  <div class="co-grid">
+    <article class="glass co-card co1">
+      <div class="co-head"><span class="co-badge">CO1</span><div><small>BTL 5</small><h3>Problem-class signatures</h3></div></div>
+      <p>Evaluate substring search, sequence alignment, network flow and NP-hard scheduling, then choose a suitable strategy.</p>
+      <div class="demo-inputs"><input id="seqA" value="COURSEMATCH"><input id="seqB" value="COURSESEARCH"><button id="runCO1" class="secondary">Run CO1</button></div>
+      <div class="mini-note">Needleman-Wunsch alignment + branch-and-bound scheduling.</div>
+      <div id="co1Output" class="result-box">Ready…</div>
+    </article>
+
+    <article class="glass co-card co2">
+      <div class="co-head"><span class="co-badge">CO2</span><div><small>BTL 3</small><h3>Linear-time string algorithms</h3></div></div>
+      <p>KMP, Z-function and Rabin-Karp use linear-time pattern matching ideas. Suffix array, LCP and suffix automaton show suffix-based structures.</p>
+      <div class="demo-inputs"><input id="stringText" value="BANANA"><input id="stringPattern" value="ANA"><button id="runCO2" class="secondary">Run CO2</button></div>
+      <div id="co2Output" class="result-box">Ready…</div>
+    </article>
+
+    <article class="glass co-card co3 wide">
+      <div class="co-head"><span class="co-badge">CO3</span><div><small>BTL 3</small><h3>Advanced dynamic programming</h3></div></div>
+      <p>One screen demonstrates interval DP, bitmask DP, DP on trees and DP on subsets. Held-Karp is also shown as a classic subset/bitmask DP example.</p>
+      <button id="runCO3" class="secondary">Run all CO3 DP patterns</button>
+      <div id="co3Output" class="result-box">Ready…</div>
+    </article>
+
+    <article class="glass co-card">
+      <div class="co-head"><span class="co-badge">CO4</span><div><small>BTL 3</small><h3>Flow, matching & capacity</h3></div></div>
+      <p>Student-course eligibility becomes a bipartite graph. Edmonds-Karp then models course capacity as a flow network.</p>
+      <div class="demo-inputs"><input id="studentName" value="Student A"><select id="studentGoal"><option>AI/ML</option><option>Data Science</option><option>Web Development</option><option>Cybersecurity</option><option>Software Engineering</option></select><button id="runMatch" class="secondary">Run</button></div>
+      <div class="flow-mini"><span>SOURCE</span><i>→</i><span>STUDENT</span><i>→</i><span>COURSE</span><i>→</i><span>CAPACITY</span><i>→</i><span>SINK</span></div>
+      <div id="co4Output" class="result-box">Ready…</div>
+    </article>
+
+    <article class="glass co-card">
+      <div class="co-head"><span class="co-badge">CO5</span><div><small>BTL 4</small><h3>NP-completeness & approximation</h3></div></div>
+      <p>Shows the canonical 3-SAT → Vertex Cover reduction and a Vertex Cover 2-approximation based on maximal matching.</p>
+      <button id="runCO5" class="secondary">Run CO5</button>
+      <div id="co5Output" class="result-box">Ready…</div>
+    </article>
+
+    <article class="glass co-card">
+      <div class="co-head"><span class="co-badge">CO6</span><div><small>BTL 3</small><h3>Randomized & parallel algorithms</h3></div></div>
+      <p>Las Vegas randomized quicksort, Monte Carlo primality testing, parallel reduction and parallel prefix scan with work-span analysis.</p>
+      <div class="demo-inputs"><input id="primeInput" type="number" value="7919"><select id="workerCount"><option>2</option><option selected>4</option><option>8</option></select><button id="runCO6" class="secondary">Run</button></div>
+      <div id="co6Output" class="result-box">Ready…</div>
+    </article>
+  </div>
+</section>
+
+<section id="tab-map" class="panel">
+  <div class="section-head"><div><label>VIVA / REVIEW VIEW</label><h2>Project map</h2><p>A simple explanation you can use during the full project review.</p></div></div>
+  <div class="map-grid">
+    <div class="glass explain"><span class="number">01</span><h3>Student gives requirements</h3><p>Career goal, interests, completed courses and credit limit become the input.</p></div>
+    <div class="glass explain"><span class="number">02</span><h3>Search finds relevant courses</h3><p>KMP, Z-function and Rabin-Karp perform exact pattern matching. If the query has mistakes, edit distance provides fuzzy recovery.</p></div>
+    <div class="glass explain"><span class="number">03</span><h3>Eligibility is checked</h3><p>A prerequisite graph is traversed using DFS to find missing prerequisite courses.</p></div>
+    <div class="glass explain"><span class="number">04</span><h3>Learning path is optimized</h3><p>Recommendation scores are treated as values and credits as weights in 0/1 Knapsack DP.</p></div>
+    <div class="glass explain"><span class="number">05</span><h3>CO4 allocation is demonstrated</h3><p>Bipartite matching assigns students to eligible courses; Edmonds-Karp respects course capacity.</p></div>
+    <div class="glass explain"><span class="number">06</span><h3>Advanced DSA is demonstrated</h3><p>CO1–CO6 lab modules make the syllabus concepts executable instead of only theoretical.</p></div>
+  </div>
+  <div class="glass architecture">
+    <label>CO COVERAGE MATRIX</label>
+    <div class="co-matrix">
+      <div><b>CO1</b><span>Needleman-Wunsch · Branch-and-bound · problem signatures</span></div>
+      <div><b>CO2</b><span>KMP · Z · Rabin-Karp rolling hash · Suffix Array · LCP · Suffix Automaton</span></div>
+      <div><b>CO3</b><span>Interval DP · Bitmask DP · Tree DP · Subset DP</span></div>
+      <div><b>CO4</b><span>Ford-Fulkerson family · Edmonds-Karp · Max-flow · Bipartite Matching · Capacity</span></div>
+      <div><b>CO5</b><span>3-SAT → Vertex Cover · Vertex Cover 2-Approximation · approximation guarantee</span></div>
+      <div><b>CO6</b><span>Las Vegas · Monte Carlo · Parallel Reduce · Parallel Prefix · Work/Span</span></div>
+    </div>
+  </div>
+  <div class="glass architecture"><label>END-TO-END ARCHITECTURE</label><div class="pipeline">
+    <span>Student UI</span><i>→</i><span>Express API</span><i>→</i><span>Course Data</span><i>→</i><span>String Search</span><i>→</i><span>Prerequisite Graph</span><i>→</i><span>DP / Matching / Flow</span><i>→</i><span>Recommendation</span>
+  </div></div>
+</section>
+</main>
+<footer><b>CourseMatch · DSA-3</b><span>CO1–CO6 interactive implementation · Node.js + Express · HTML/CSS/JavaScript</span></footer>
+<div id="modal" class="modal-bg" hidden><div class="modal"><button id="closeModal">×</button><label>PREREQUISITE PATH</label><h3 id="modalTitle"></h3><div id="modalBody"></div></div></div>
+<script src="app.js"></script>
+</body></html>
