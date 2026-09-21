@@ -1,0 +1,16 @@
+[
+  {
+    "query": "machne lerning",
+    "category": null,
+    "mode": "fuzzy",
+    "resultCount": 1,
+    "timestamp": "2026-08-27T09:29:07.546Z"
+  },
+  {
+    "query": "database",
+    "category": null,
+    "mode": "pattern",
+    "resultCount": 2,
+    "timestamp": "2026-08-27T09:29:07.605Z"
+  }
+]
